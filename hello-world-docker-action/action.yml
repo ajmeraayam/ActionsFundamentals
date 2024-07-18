@@ -6,11 +6,11 @@ inputs:
     description: 'Name of the user to be greeted'
     required: true
     default: 'WORLD'
-  outputs:
-    time:
-      description: 'The time to say hello'
-  runs:
-    using: 'docker'
-    image: 'Dockerfile'
-    args:
-      - ${{ inputs.who-to-greet }}
+outputs:
+  time:
+    description: 'The time to say hello'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.who-to-greet }}
